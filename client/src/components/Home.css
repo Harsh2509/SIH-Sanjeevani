@@ -1,0 +1,62 @@
+.header-container{
+    padding:2% 2%;
+    color: white;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0 4px 20px gray;
+}
+
+.heading{
+    font-size: 250%;
+}
+
+.sub-heading{
+    font-size: 120%;
+    font-weight: 500;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    font-weight: none;
+}
+
+.options-container{
+    color: white;
+    padding: 2% 3%;
+}
+
+.options-image{
+    width: 100%;
+    height: 100%;
+    outline: 5px solid white;
+    border-radius: 5px;
+}
+
+.capsule{
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+}
+
+.on-image{
+    height: 98%;
+    width: 98%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+
+.on-image:hover{
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.on-image-text{
+    position: absolute;
+
+}
