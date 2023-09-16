@@ -3,7 +3,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Signin from './components/Signin'
+import Login from './components/Login'
 
 function App() {
 
@@ -13,7 +13,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/"  element={<Home/>} />
-          <Route path="/signin" element={<Signin/>} />
+          <Route path="/signin" element={<Login/>} />
+          
         </Routes>
       </Router>
     </>
