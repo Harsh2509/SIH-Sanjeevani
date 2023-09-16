@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    height: 100vh;
+    background: #02962080;
+}
+h1{
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    font-size: 4rem;
+}
+span{
+    color: #f8d04e;
+}
+#card-section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2rem;
+}
+.card {
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+}
+
+.card,
+.back-card,
+.front-card {
+    height: 10rem;
+    width: 10rem;
+}
+
+.back-card,
+.front-card {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-card{
+    background: #f8d04e;
+    background-size: contain;
+    border-radius: .6rem;
+    box-shadow: rgba(26, 26, 26, 0.82) 0px 8px 24px;
+    padding: 2rem;
+    border-radius: .6rem;
+}
+
+.back-card{
+    transform: rotateY(180deg);
+    border-radius: .6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: rgba(26, 26, 26, 0.82) 0px 8px 24px;
+    padding: 2rem;
+}
+
+.card_selected{
+    transform: rotateY(180deg);
+}
+
+.card_match .front-card{
+     background: #000000bd;
+}
