@@ -1,8 +1,8 @@
 .header-container{
     padding:2% 2%;
     color: white;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
-    box-shadow: 0 4px 20px gray;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.197);
+    background-color: #82D3AC;
 }
 
 .heading{
@@ -10,22 +10,31 @@
 }
 
 .sub-heading{
+    text-align: center;
     font-size: 120%;
     font-weight: 500;
     padding-top: 3%;
     padding-bottom: 5%;
     font-weight: none;
 }
-
+.sub-heading1{
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    font-weight: 600;
+}
 .options-container{
     color: white;
     padding: 2% 3%;
 }
 
 .options-image{
+    display: block;
     width: 100%;
     height: 100%;
-    outline: 5px solid white;
     border-radius: 5px;
 }
 
@@ -33,8 +42,9 @@
     position: relative;
     height: 100%;
     cursor: pointer;
+    border: 4px solid rgba(0, 0, 0, 0.374);
+    border-radius: 5px;
 }
-
 .on-image{
     height: 98%;
     width: 98%;
@@ -42,21 +52,53 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: black;
-    background-color: white;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.891);
     padding: 5px;
     border-radius: 5px;
     transition-duration: 0.5s;
 }
 
-
-.on-image:hover{
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-}
-
-.on-image-text{
+.on-image-text {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #000000b7;
+    overflow: hidden;
+    border-radius: 2px;
+    width: 100%;
+    height: 0;
+    transition: ease 0.5s;
 
+}
+.capsule:hover .on-image-text{
+    height: 100%;
+}
+.on-image-text  h2{
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-weight: 900;
+}
+.on-image-text  p{
+    font-size: 1rem;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+.on-image-text button{
+    height: 3rem;
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: -1rem;
+    text-align: center;
+    background: #fff;
+    transition: all ease 0.3s;
+}
+.on-image-text button:active{
+    scale: 0.9;
 }

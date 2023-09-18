@@ -1,0 +1,200 @@
+.page5{
+    height: 100vh;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.container1{
+    margin-top: -7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+}
+.container1 .logo img{
+    margin-top: -30%;
+    margin-left: 8vh;
+    width: 35vh;
+    height: 9vh;
+}
+.welcome p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -2.5vh;
+    text-align: center;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 1vh;
+    width: 480px;
+    background: white;
+    border-radius: 6px;
+}
+.input input{
+    padding-left: 15px;
+    border-radius: 4px;
+    height: 50px;
+    width: 650px;
+    border: 0.1px solid black;
+    padding-right: 15px;
+    outline: none;
+    color: #797979;
+    background-color: rgba(128, 128, 128, 0.248);
+    font-size: 17px;
+}
+.cheking{
+    display: flex;
+    font-size: 14px;
+}
+.cheking .forgot{
+    margin-left: 27vh;
+}
+.cheking .forgot a{
+    color: black;
+}
+.submit-container{
+    display: flex;
+    gap: 30px;
+    margin: 55px auto;
+}
+.submit{
+    margin-top: -6vh;
+    padding-top: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 46px;
+    color: #fff;
+    background: #82D3AC;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.submit:active{
+    scale: 0.9;
+}
+.container2{
+    margin-top: -20%;
+}
+.container2 .child_div{
+    border-radius: 5px;
+    text-align: start;
+    margin-top: 2.9vh;
+    margin-left: 3vh;
+    position: relative;
+    width: 59vh;
+    height: 54vh;
+    background-color:  #82D3AC;
+}
+.or{
+    margin-top: -5vh;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.or p{
+    margin-left: -10vh;
+    margin-right: -10vh;
+}
+.or img{
+    width: 49vh;
+    height: 20px;
+}
+.gray{
+    background: #79797967;
+    color: rgba(255, 255, 255, 0.845);
+}
+.social{
+    margin-top: -5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.social p{
+    margin-bottom: -0.5vh;
+}
+.socie{
+    display: flex;
+    align-items: center;
+    margin: auto; 
+    width: 490px;
+    height: 50px;
+    border-radius: 6px;
+    border: 0.5px black solid;
+    transition: all ease 0.2s;
+}
+.socie:active{
+    scale: 0.93;
+}
+.socie img{
+    margin: 0px 21px;
+    height: 25px;
+    width: 25px;
+    z-index: 99;
+}
+button{
+    cursor: pointer;
+    margin-left: -55px;
+    align-items: center;
+    width: 470px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 18px;
+    background: transparent;
+}
+.social span .agree{
+    margin-bottom: 5vh;
+    font-size: 12px;
+}
+.social span{
+    text-align: left;
+    color: black;
+    margin-bottom: 3vh;
+    font-size: 12px;
+}
+.parent_div{
+    border: 2.5px solid black;
+    margin-top: 18vh;
+    border-radius: 6px;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    height: 60vh;
+    width: 58vh;
+}
+.child_div img{
+    margin-left: 18vh;
+    height: 25vh;
+    width: 25vh;
+    margin-top: 10vh;
+}
+.child_div p{
+    margin-left: 5vh;
+    color: white;
+    font-weight: 350;
+    font-size: 18px;
+    padding: 20px;
+}
+.child_div a{
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    bottom: 4vh;
+    right: 4vh;
+}

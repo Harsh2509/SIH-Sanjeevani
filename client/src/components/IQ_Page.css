@@ -1,0 +1,39 @@
+.page1{
+    max-width: 100%;
+    max-height: 100vh;
+    background: #fff;
+    flex-direction: column;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #82D3AC;
+    height: 15vh;
+    box-shadow: 0px 1px 8px black;
+    position: sticky;
+}
+
+.navbar h1{
+    font-size: 4vh;
+    padding: 7rem;
+    font-weight: 700;
+}
+.navbar button{
+    height: 5.2vh;
+    width: 18vh;
+    padding: 10px;
+    border: 2px solid white;
+    font-family: 'Poppins';
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10vh;
+    transform: all ease 0.4s;
+    border-radius: 5px;
+}
+.navbar button:active{
+    scale: 0.9;
+}

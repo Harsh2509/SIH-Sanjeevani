@@ -15,10 +15,14 @@
 .nav-links a{
     text-decoration: none;
     color: black;
+    transition:ease 0.2s;
 }
 
 .navbar{
     position: sticky;
     top: 0;
     z-index: 10;
+}
+.nav-links a:hover{
+    font-weight: 700;
 }

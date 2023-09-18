@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import "./Home.css"
@@ -31,7 +31,7 @@ function Header(){
 function Options(){
   return (
     <div className='options-container'>
-      <div className="sub-heading">Our most successful products</div>
+      <div className="sub-heading1">Our most successful products</div>
       <Grid container spacing={2}>
         <Grid item sm={12} md={12} lg={4}> 
           <Capsule img="/public/cognitive.jpg" title="Coginitive Exercises" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore."/>
@@ -57,12 +57,11 @@ function Capsule({img, title, description}: CapsuleProps){
   return (
     <div className="capsule">
       <img src={img} alt="" className='options-image'/>
-      <div className="on-image">
         <div className="on-image-text">
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           <p>{description}</p>
+          <button>Click to Proceed</button>
         </div>
-      </div>
     </div>
   )
 }
