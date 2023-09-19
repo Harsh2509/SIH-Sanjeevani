@@ -33,3 +33,61 @@
     font-size: 200%;
     cursor: pointer;
 }
+.capsules{
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.capsules img{
+    height: 35vh;
+    width: 60vh;
+    margin-right: 7vh;
+}
+.on-image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #000000b7;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 60vh;
+    height: 0;
+    margin-left: 6px;
+    margin-bottom: 7px;
+    transition: ease 0.5s;
+}
+.capsules:hover .on-image-text{
+    height: 34.8vh;
+}
+.on-image-text  h2{
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 3rem;
+}
+.on-image-text  p{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+.on-image-text button{
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: -1rem;
+    text-align: center;
+    background: #fff;
+    transition: all ease 0.3s;
+}
+.on-image-text button:active{
+    scale: 0.9;
+}

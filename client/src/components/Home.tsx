@@ -85,7 +85,7 @@ function Capsule({ img, title, description, route }: CapsuleProps) {
   return (
     <div className="capsule">
       <img src={img} alt="" className="options-image" />
-      <div className="on-image-text">
+      <div className="on-image-text1">
         <h2>{title}</h2>
         <p>{description}</p>
         <button

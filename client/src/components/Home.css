@@ -67,7 +67,7 @@
     transition-duration: 0.5s;
 }
 
-.on-image-text {
+.on-image-text1 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -81,20 +81,20 @@
     transition: ease 0.5s;
 
 }
-.capsule:hover .on-image-text{
+.capsule:hover .on-image-text1{
     height: 100%;
 }
-.on-image-text  h2{
-    font-size: 2.1em;
+.on-image-text1  h2{
+    font-size: 4vh;
     margin-top: 1rem;
     font-weight: 900;
 }
-.on-image-text  p{
+.on-image-text1  p{
     font-size: 1em;
     margin-top: 2rem;
     font-weight: 700;
 }
-.on-image-text button{
+.on-image-text1 button{
     align-items: center;
     justify-content: center;
     height: 3rem;
@@ -109,7 +109,7 @@
     background: #fff;
     transition: all ease 0.3s;
 }
-.on-image-text button:active{
+.on-image-text1 button:active{
     scale: 0.9;
 }
 

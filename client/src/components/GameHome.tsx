@@ -126,12 +126,14 @@ function GameSections() {
 function EachGame({ game }: { game: GameInterface }) {
   return (
     <>
+    <div className="capsules">
       <img src={game.src} alt={game.name} />
       <div className="on-image-text">
         <h2>{game.name}</h2>
         <p>{`Hi there!`}</p>
-        <button>Click to Proceed</button>
+        <button>Play</button>
       </div>
+    </div>
     </>
   );
 }

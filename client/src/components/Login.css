@@ -7,7 +7,7 @@
     background-color: white;
 }
 .container1{
-    margin-top: -7%;
+    margin-top: -7vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,7 +187,7 @@ button{
     margin-left: 5vh;
     color: white;
     font-weight: 350;
-    font-size: 18px;
+    font-size: 2vh;
     padding: 20px;
 }
 .child_div a{

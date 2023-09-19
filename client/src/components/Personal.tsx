@@ -1,6 +1,5 @@
 //import React, { useState } from 'react'
 import './Personal.css'
-import profile from '../Assets/profile.webp'
 
 const Personal = () => {
 
@@ -14,8 +13,8 @@ const Personal = () => {
         <p>Child details</p>
         <div className="child_detail">
           <div className="setion1">
-          <div className="image">
-            <img src={profile} alt="" />
+              <div className="image">
+                <input type="file" />
           </div>
           </div>
           <div className="setion3">
@@ -111,7 +110,7 @@ const Personal = () => {
           </div>
         </div>
         <input type="submit" id='submit'/>
-        <input type='button' value='Clear' id='submit1'/>
+        <input type='button' value='Clear' id='submit'/>
     </div>
     </>
   )
