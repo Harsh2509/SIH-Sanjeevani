@@ -4,6 +4,14 @@
     border-bottom: 2px solid rgba(0, 0, 0, 0.197);
     background-color: #82D3AC;
 }
+.header-container button{
+    background: transparent;
+    border: 2px black solid;
+    width: 16em;
+    background: #fff;
+    color: black;
+    font-weight: 750;
+}
 
 .heading{
     font-size: 250%;
@@ -77,16 +85,18 @@
     height: 100%;
 }
 .on-image-text  h2{
-    font-size: 2.5rem;
+    font-size: 2.1em;
     margin-top: 1rem;
     font-weight: 900;
 }
 .on-image-text  p{
-    font-size: 1rem;
+    font-size: 1em;
     margin-top: 2rem;
     font-weight: 700;
 }
 .on-image-text button{
+    align-items: center;
+    justify-content: center;
     height: 3rem;
     width: 9rem;
     font-size: 1rem;
@@ -101,4 +111,35 @@
 }
 .on-image-text button:active{
     scale: 0.9;
+}
+
+@media only screen and (max-width: 680px){
+    .on-image-text  h2{
+        font-size: 1.5em;
+    }
+    .on-image-text  p{
+        font-size: .9em;
+        margin-bottom: -2em;
+    }
+    .on-image-text button{
+        width: 12em;
+        height: 6em;
+        font-size: .5em;
+    }
+    .sub-heading1{
+        font-size: 1.2rem;
+    }
+    .heading{
+        margin-top: .5em;
+        font-size: 2em;
+        text-align: center;
+    }
+    .sub-heading{
+        font-size: 100%;
+    }
+    .header-container button{
+        font-size: .9em;
+        width: 9em;
+        height: 3.5em;
+    }
 }
