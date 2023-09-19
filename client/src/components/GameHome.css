@@ -1,0 +1,29 @@
+.sections{
+    background-color: white;
+    min-height: 90vh;
+}
+
+.section{
+    padding: 3% 0% 0% 2%;
+    margin-top: 5%;
+}
+
+.section-games{
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 2%;
+}
+
+.section-games img{
+    margin: 0% 1%;
+    border-radius: 10px;
+}
+
+.section-games::-webkit-scrollbar{
+    display: none;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: row;
+}

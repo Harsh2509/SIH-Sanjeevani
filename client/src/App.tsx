@@ -8,6 +8,7 @@ import Details from "./components/Personal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signin from "./components/Signin";
 import BubbleGame from "./games/Bubble_Game/game"; // Corrected the import name
+import GameHome from "./components/GameHome";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/iqpage" element={<IQ_Page />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/games" element={<GameHome />} />
           <Route path="/games/*" element={<Games />} />
         </Routes>
       </>
