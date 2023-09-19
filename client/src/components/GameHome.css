@@ -23,7 +23,13 @@
     display: none;
 }
 
-.wrap{
+.wraper{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wraper i{
+    font-size: 200%;
+    cursor: pointer;
 }

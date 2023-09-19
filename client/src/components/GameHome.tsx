@@ -7,16 +7,19 @@ const games = [
     name: "Game 1",
     route: "/games/game-1",
     src: "https://th.bing.com/th/id/OIP.CXPhGOOmJdWVk4MrsltTlAHaEJ?pid=ImgDet&rs=1",
+    targets: "Memory",
   },
   {
     name: "Game 2",
     route: "/games/game-2",
-    src: "https://th.bing.com/th/id/OIP.CXPhGOOmJdWVk4MrsltTlAHaEJ?pid=ImgDet&rs=1",
+    src: "https://th.bing.com/th/id/OIP.ZpaC6NT1Rx3oJuQsHVZfqwHaEo?pid=ImgDet&rs=1",
+    targets: "Memory & Focus",
   },
   {
     name: "Game 3",
     route: "/games/game-3",
     src: "https://th.bing.com/th/id/OIP.CXPhGOOmJdWVk4MrsltTlAHaEJ?pid=ImgDet&rs=1",
+    targets: "IQ",
   },
 ];
 
@@ -24,6 +27,7 @@ interface GameInterface {
   name: string;
   route: string;
   src: string;
+  targets: string;
 }
 
 export default function GameHome() {
@@ -61,15 +65,15 @@ function Header() {
 
 function GameSections() {
   useEffect(() => {
-    const sectionElement = document.querySelector(".section-games");
-    sectionElement?.addEventListener("wheel", (event) => {
-      event.preventDefault();
-      if (event.deltaY !== 0) {
-        window.scrollBy(0, event.deltaY);
-      } else {
-        // If not vertical scroll, perform horizontal scroll
-        sectionElement.scrollLeft += event.deltaX;
-      }
+    const sectionElement = document.querySelectorAll(".section-games");
+    sectionElement.forEach((eachSection) => {
+      eachSection?.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        if (event.deltaY !== 0) {
+          // window.scrollBy(0, event.deltaY);
+          eachSection.scrollLeft += event.deltaY;
+        }
+      });
     });
   }, []);
 
@@ -78,33 +82,37 @@ function GameSections() {
       <div className="sections">
         <div className="section">
           <h2>Recommeded by your doctor</h2>
-          <i className="fa-solid fa-circle-arrow-left"></i>
-          <div className="section-games">
-            {games.map((element) => {
-              return <EachSection game={element} />;
-            })}
-          </div>
-          <i className="fa-solid fa-circle-arrow-right"></i>
-        </div>
-
-        <div className="section">
-          <h2>Recommeded by your doctor</h2>
-          <i className="fa-solid fa-circle-arrow-left"></i>
-          <div className="section-games">
-            {games.map((element) => {
-              return <EachSection game={element} />;
-            })}
-          </div>
-          <i className="fa-solid fa-circle-arrow-right"></i>
-        </div>
-
-        <div className="section">
-          <h2>Recommeded by your doctor</h2>
-          <div className="wrap">
+          <div className="wraper">
             <i className="fa-solid fa-circle-arrow-left"></i>
             <div className="section-games">
               {games.map((element) => {
-                return <EachSection game={element} />;
+                return <EachGame game={element} />;
+              })}
+            </div>
+            <i className="fa-solid fa-circle-arrow-right"></i>
+          </div>
+        </div>
+
+        <div className="section">
+          <h2>Recommeded by your doctor</h2>
+          <div className="wraper">
+            <i className="fa-solid fa-circle-arrow-left"></i>
+            <div className="section-games">
+              {games.map((element) => {
+                return <EachGame game={element} />;
+              })}
+            </div>
+            <i className="fa-solid fa-circle-arrow-right"></i>
+          </div>
+        </div>
+
+        <div className="section">
+          <h2>Recommeded by your doctor</h2>
+          <div className="wraper">
+            <i className="fa-solid fa-circle-arrow-left"></i>
+            <div className="section-games">
+              {games.map((element) => {
+                return <EachGame game={element} />;
               })}
             </div>
             <i className="fa-solid fa-circle-arrow-right"></i>
@@ -115,10 +123,15 @@ function GameSections() {
   );
 }
 
-function EachSection({ game }: { game: GameInterface }) {
+function EachGame({ game }: { game: GameInterface }) {
   return (
     <>
       <img src={game.src} alt={game.name} />
+      <div className="on-image-text">
+        <h2>{game.name}</h2>
+        <p>{`Hi there!`}</p>
+        <button>Click to Proceed</button>
+      </div>
     </>
   );
 }
