@@ -90,7 +90,6 @@ function Capsule({ img, title, description, route }: CapsuleProps) {
         <p>{description}</p>
         <button
           onClick={() => {
-            console.log("clicked bhai");
             navigate(route);
           }}
         >
