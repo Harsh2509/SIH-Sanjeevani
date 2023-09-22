@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signin from "./components/Signin";
 import BubbleGame from "./games/Bubble_Game/game"; // Corrected the import name
 import GameHome from "./components/GameHome";
+import Progress from "./components/Progress";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/details" element={<Details />} />
           <Route path="/games" element={<GameHome />} />
           <Route path="/games/*" element={<Games />} />
+          <Route path="/progress" element={<Progress />}></Route>
         </Routes>
       </>
     </Router>
