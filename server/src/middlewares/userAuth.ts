@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import * as jwt from "jsonwebtoken";
 import { User } from "../database";
 
-const secret = process.env.secret || "t3rc3Ssdkfaldfgiurxcmnbuhjvcnbgiegouy";
+const secret = process.env.SECRET || "t3rc3Ssdkfaldfgiurxcmnbuhjvcnbgiegouy";
 
 export default function userAuthenticationJWT(
   req: Request,

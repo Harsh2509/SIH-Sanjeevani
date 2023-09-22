@@ -27,8 +27,9 @@ const userSchema = new Schema(
       trim: true,
     },
     email: {
-      required: true,
+      type: String,
       trim: true,
+      required: true,
       validate: {
         validator: emailValidator,
         message: "Invalid Email passed to mongoose. (coming from UserSchema)",
@@ -43,7 +44,7 @@ const userSchema = new Schema(
       type: Number,
       default: 0,
     },
-    stread: {
+    streak: {
       type: Number,
       default: 0,
     },
