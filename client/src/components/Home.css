@@ -34,14 +34,16 @@
 .sub-heading1{
     color: black;
     text-align: center;
-    font-size: 3vw;
-    font-weight: 500;
-    padding-top: 3%;
-    padding-bottom: 5%;
-    font-weight: 600;
+    font-family: 'Open Sans';
+    font-size: 2.5vw;
+    padding-top: 1.5%;
+    padding-bottom: 2.8%;
+    font-weight: 750;
 }
 .sub-heading1 span{
     color: #1d9f60;
+    font-family: 'Open Sans';
+    font-weight: 750;
 }
 .options-container{
     color: white;
@@ -108,13 +110,13 @@
 .on-image-text1 button{
     align-items: center;
     justify-content: center;
-    height: 4vw;
-    width: 12vw;
+    height: 3vw;
+    width: 11vw;
     font-size:.91vw;
     font-weight: 600;
     margin-top: 2vw;
     border: 2px solid black;
-    border-radius: 30%;
+    border-radius: 10px;
     margin-left: -1rem;
     text-align: center;
     background: #fff;

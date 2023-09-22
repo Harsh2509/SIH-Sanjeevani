@@ -9,6 +9,7 @@ import Signin from "./components/Signin";
 import BubbleGame from "./games/Bubble_Game/game"; // Corrected the import name
 import GameHome from "./components/GameHome";
 import Progress from "./components/Progress";
+import Expert from "./components/child_details";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/games" element={<GameHome />} />
           <Route path="/games/*" element={<Games />} />
           <Route path="/progress" element={<Progress />}></Route>
+          <Route path="/child_expert" element={<Expert />}></Route>
         </Routes>
       </>
     </Router>

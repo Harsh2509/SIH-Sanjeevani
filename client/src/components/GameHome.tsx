@@ -5,19 +5,19 @@ import { useNavigate } from "react-router-dom";
 
 const games = [
   {
-    name: "Game 1",
+    name: "Fill the Color",
     route: "/games/game-1",
     src: "https://th.bing.com/th/id/OIP.CXPhGOOmJdWVk4MrsltTlAHaEJ?pid=ImgDet&rs=1",
     targets: "Memory",
   },
   {
-    name: "Game 2",
+    name: "Card Flip",
     route: "/games/bubble-game",
     src: "https://th.bing.com/th/id/OIP.ZpaC6NT1Rx3oJuQsHVZfqwHaEo?pid=ImgDet&rs=1",
     targets: "Memory & Focus",
   },
   {
-    name: "Game 3",
+    name: "Bubble Game",
     route: "/games/game-3",
     src: "https://th.bing.com/th/id/OIP.CXPhGOOmJdWVk4MrsltTlAHaEJ?pid=ImgDet&rs=1",
     targets: "IQ",
@@ -41,6 +41,7 @@ export default function GameHome() {
 }
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="header-container">
@@ -54,7 +55,9 @@ function Header() {
             <div className="heading">Cognitive Exercises</div>
           </Grid>
           <Grid item>
-            <Button variant="contained" size="large">
+            <Button variant="contained" size="large" onClick={() => {
+              navigate('/progress');
+            }}>
               Progress Report
             </Button>
           </Grid>
@@ -132,7 +135,7 @@ function EachGame({ game }: { game: GameInterface }) {
       <img src={game.src} alt={game.name} />
       <div className="on-image-text">
         <h2>{game.name}</h2>
-        <p>{`Hi there!`}</p>
+        <p>{`Let's Start`}</p>
         <button onClick={()=>{
           navigate(game.route);
         }}>Play</button>
