@@ -5,9 +5,11 @@ import google_icon from '../assets/google.png';
 import line from '../assets/line.png';
 import outlook_icon from '../assets/outlook.png';
 import apple_icon from '../assets/apple.png';
+import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const [action, setAction] = useState<string>("Log In");
+  const navigate = useNavigate();
 
   return (
     <>
@@ -29,8 +31,8 @@ const Login: React.FC = () => {
               {action === "Sign Up" ? <div></div> : <div className="forgot"><a href="/">Forgot password</a></div>}
             </div>
             <div className="submit-container">
-              <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => { setAction("Log In") }}>Log In</div>
-              <div className={action === "Log In" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up") }}>Sign Up</div>
+              <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => { setAction("Log In"); navigate('/details'); }}>Log In</div>
+              <div className={action === "Log In" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up"); navigate('/details'); }}>Sign Up</div>
             </div>
           </div>
           <div className="or">

@@ -14,6 +14,7 @@ export default function Home() {
 }
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <div className="header-container">
       <Grid
@@ -30,8 +31,10 @@ function Header() {
           </div>
         </Grid>
         <Grid item>
-          <Button variant="contained" size="large">
-            Use for free
+          <Button variant="contained" size="large" onClick={()=>{
+            navigate('/details');
+          }}>
+            About child
           </Button>
         </Grid>
       </Grid>
@@ -42,13 +45,14 @@ function Header() {
 function Options() {
   return (
     <div className="options-container">
-      <div className="sub-heading1">Our most successful products</div>
+      <div className="sub-heading1">Our most <span>successful</span> products</div>
       <Grid container spacing={2}>
         <Grid item sm={12} md={12} lg={4}>
           <Capsule
             img="/public/cognitive.jpg"
             title="Coginitive Exercises"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore."
+            description="
+            This section offers thrilling educational games aimed at enriching your child's knowledge and skills."
             route="/games"
           />
         </Grid>
@@ -56,15 +60,15 @@ function Options() {
           <Capsule
             img="/public/eeg.png"
             title="EEG Tracking"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore."
+            description="Here, you can monitor cerebral signals through the use of an EEG device."
             route="/"
           />
         </Grid>
         <Grid item sm={12} md={12} lg={4}>
           <Capsule
             img="/public/extra.jpg"
-            title="Cognitive Test"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore."
+            title="Bloging Area"
+            description="Here are a selection of blogs authored by mental health professionals who specialize in promoting emotional well-being."
             route="/"
           />
         </Grid>
@@ -84,7 +88,9 @@ function Capsule({ img, title, description, route }: CapsuleProps) {
   const navigate = useNavigate();
   return (
     <div className="capsule">
+      <div className="img">
       <img src={img} alt="" className="options-image" />
+      </div>
       <div className="on-image-text1">
         <h2>{title}</h2>
         <p>{description}</p>

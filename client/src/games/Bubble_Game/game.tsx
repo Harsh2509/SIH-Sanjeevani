@@ -14,7 +14,7 @@ export default function Game1() {
     function MakeBubble() {
       let clutter = "";
 
-      for (let i = 1; i < 75; i++) {
+      for (let i = 1; i < 125; i++) {
         const rn = Math.floor(Math.random() * 10);
         clutter += `<div class="bubble">${rn}</div>`;
       }

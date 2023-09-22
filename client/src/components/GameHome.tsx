@@ -1,6 +1,7 @@
 import { Button, Grid } from "@mui/material";
 import React, { useEffect } from "react";
 import "./GameHome.css";
+import { useNavigate } from "react-router-dom";
 
 const games = [
   {
@@ -11,7 +12,7 @@ const games = [
   },
   {
     name: "Game 2",
-    route: "/games/game-2",
+    route: "/games/bubble-game",
     src: "https://th.bing.com/th/id/OIP.ZpaC6NT1Rx3oJuQsHVZfqwHaEo?pid=ImgDet&rs=1",
     targets: "Memory & Focus",
   },
@@ -124,6 +125,7 @@ function GameSections() {
 }
 
 function EachGame({ game }: { game: GameInterface }) {
+  const navigate = useNavigate();
   return (
     <>
     <div className="capsules">
@@ -131,7 +133,9 @@ function EachGame({ game }: { game: GameInterface }) {
       <div className="on-image-text">
         <h2>{game.name}</h2>
         <p>{`Hi there!`}</p>
-        <button>Play</button>
+        <button onClick={()=>{
+          navigate(game.route);
+        }}>Play</button>
       </div>
     </div>
     </>

@@ -1,54 +1,64 @@
 .header-container{
+    width: 100%;
     padding:2% 2%;
     color: white;
+    height: 10vw;
     border-bottom: 2px solid rgba(0, 0, 0, 0.197);
     background-color: #82D3AC;
 }
 .header-container button{
     background: transparent;
     border: 2px black solid;
-    width: 16em;
+    width: 12vw;
+    font-size: 1vw;
+    font-family: 'Kanit';
+    height: 3vw;
     background: #fff;
     color: black;
-    font-weight: 750;
+    font-weight: 550;
 }
 
 .heading{
-    font-size: 250%;
+    margin-top: -1vw;
+    font-size: 3vw;
 }
 
 .sub-heading{
+    margin-top: -1.1vw;
     text-align: center;
-    font-size: 120%;
-    font-weight: 500;
+    font-size: 1.2vw;
+    font-weight: 450;
     padding-top: 3%;
     padding-bottom: 5%;
-    font-weight: none;
 }
 .sub-heading1{
     color: black;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3vw;
     font-weight: 500;
     padding-top: 3%;
     padding-bottom: 5%;
     font-weight: 600;
+}
+.sub-heading1 span{
+    color: #1d9f60;
 }
 .options-container{
     color: white;
     padding: 2% 3%;
 }
 
-.options-image{
+.img .options-image{
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 30vw;
+    height: 22vw;
     border-radius: 5px;
 }
 
 .capsule{
     position: relative;
-    height: 100%;
+    height: 22.5vw;
+    width: 30.5vw;
     cursor: pointer;
     border: 4px solid rgba(0, 0, 0, 0.374);
     border-radius: 5px;
@@ -67,7 +77,7 @@
     transition-duration: 0.5s;
 }
 
-.on-image-text1 {
+.on-image-text1{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -79,31 +89,32 @@
     width: 100%;
     height: 0;
     transition: ease 0.5s;
-
 }
 .capsule:hover .on-image-text1{
     height: 100%;
 }
 .on-image-text1  h2{
-    font-size: 4vh;
-    margin-top: 1rem;
-    font-weight: 900;
+    font-size: 2.4vw;
+    margin-top: .3vw;
+    font-weight: 700;
 }
 .on-image-text1  p{
-    font-size: 1em;
-    margin-top: 2rem;
-    font-weight: 700;
+    padding: 10px;
+    line-height: 2vw;
+    font-size: 1.4vw;
+    margin-top: 1vw;
+    font-weight: 500;
 }
 .on-image-text1 button{
     align-items: center;
     justify-content: center;
-    height: 3rem;
-    width: 9rem;
-    font-size: 1rem;
+    height: 4vw;
+    width: 12vw;
+    font-size:.91vw;
     font-weight: 600;
-    margin-top: 2.5rem;
+    margin-top: 2vw;
     border: 2px solid black;
-    border-radius: 15px;
+    border-radius: 30%;
     margin-left: -1rem;
     text-align: center;
     background: #fff;
@@ -112,34 +123,76 @@
 .on-image-text1 button:active{
     scale: 0.9;
 }
-
-@media only screen and (max-width: 680px){
-    .on-image-text  h2{
-        font-size: 1.5em;
+@media (max-width: 1200px){
+    .capsule{
+        margin-left: 22vw;
+        height: 30.5vw;
+        width: 48.5vw;
     }
-    .on-image-text  p{
-        font-size: .9em;
-        margin-bottom: -2em;
+    .img .options-image{
+        height: 29.8vw;
+        width: 47.8vw;
     }
-    .on-image-text button{
-        width: 12em;
-        height: 6em;
-        font-size: .5em;
+    
+}
+@media (max-width: 895px){
+    .header-container button{
+        margin-right: 4vw;
+        width: 13vw;
+        font-size: 1vw;
+        height: 3vw;
+        font-weight: 550;
     }
     .sub-heading1{
-        font-size: 1.2rem;
+        font-size: 4vw;
     }
-    .heading{
-        margin-top: .5em;
-        font-size: 2em;
-        text-align: center;
+}
+@media (max-width: 792px){
+    .header-container button{
+        margin-right: 4vw;
+        width: 14vw;
+        font-size: 1vw;
+        height: 4vw;
+        font-weight: 550;
     }
-    .sub-heading{
-        font-size: 100%;
+}
+@media (max-width: 650px){
+    .header-container button{
+        margin-right: 4vw;
+        width: 15vw;
+        font-size: 1vw;
+        height: 5vw;
+        font-weight: 550;
+    }
+}
+@media (max-width: 570px){
+    .img .options-image{
+        height: 28 .8vw;
+        width: 46.8vw;
     }
     .header-container button{
-        font-size: .9em;
-        width: 9em;
-        height: 3.5em;
+        display: none;
+    }
+    .on-image-text1 h2{
+        font-size: 12px;
+    }
+    .on-image-text1 p{
+        padding: 8px;
+        font-size: 8px;
+    }
+    .on-image-text1 button{
+        margin-left: 0px;
+        font-size: 6px;
+        height: 22px;
+        width: 50px;
+    }
+}
+@media (max-width: 322px){
+    .on-image-text1 h2{
+        font-size: 8px;
+    }
+    .on-image-text1 p{
+        padding: 2px;
+        font-size: 6px;
     }
 }
