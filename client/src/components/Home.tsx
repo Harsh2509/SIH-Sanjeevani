@@ -31,9 +31,13 @@ function Header() {
           </div>
         </Grid>
         <Grid item>
-          <Button variant="contained" size="large" onClick={()=>{
-            navigate('/details');
-          }}>
+          <Button
+            variant="contained"
+            size="large"
+            onClick={() => {
+              navigate("/details");
+            }}
+          >
             About child
           </Button>
         </Grid>
@@ -45,7 +49,9 @@ function Header() {
 function Options() {
   return (
     <div className="options-container">
-      <div className="sub-heading1">Our most <span>successful</span> products</div>
+      <div className="sub-heading1">
+        Our most <span>successful</span> products
+      </div>
       <Grid container spacing={2}>
         <Grid item sm={12} md={12} lg={4}>
           <Capsule
@@ -89,7 +95,7 @@ function Capsule({ img, title, description, route }: CapsuleProps) {
   return (
     <div className="capsule">
       <div className="img">
-      <img src={img} alt="" className="options-image" />
+        <img src={img} alt="" className="options-image" />
       </div>
       <div className="on-image-text1">
         <h2>{title}</h2>

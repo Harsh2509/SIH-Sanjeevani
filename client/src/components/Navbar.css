@@ -12,6 +12,7 @@ nav ul li a{
     text-decoration: none;
 }
 label img{
+    cursor: pointer;
     margin-top: 25px;
     height: 60px;
     width: 340px;

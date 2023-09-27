@@ -6,28 +6,29 @@ import { useNavigate } from "react-router-dom";
 const games = [
   {
     name: "Fill the Color",
-    route: "/games/game-1",
-    src: "https://th.bing.com/th/id/OIP.CXPhGOOmJdWVk4MrsltTlAHaEJ?pid=ImgDet&rs=1",
+    href: "/bubblegame.html",
+    src: "https://th.bing.com/th/id/OIP.EA2Da6CS8Xt6RVw1O7g5NAHaEc?pid=ImgDet&rs=1",
     targets: "Memory",
   },
   {
-    name: "Card Flip",
+    name: "Bubble Game",
     route: "/games/bubble-game",
-    src: "https://th.bing.com/th/id/OIP.ZpaC6NT1Rx3oJuQsHVZfqwHaEo?pid=ImgDet&rs=1",
-    targets: "Memory & Focus",
+    src: "https://i.imgur.com/goS4umM.png",
+    targets: "IQ",
   },
   {
-    name: "Bubble Game",
-    route: "/games/game-3",
-    src: "https://th.bing.com/th/id/OIP.CXPhGOOmJdWVk4MrsltTlAHaEJ?pid=ImgDet&rs=1",
-    targets: "IQ",
+    name: "Card Flip",
+    href: "https://altered-memory.netlify.app/",
+    src: "https://i.imgur.com/xQaAAHw.png",
+    targets: "Memory & Focus",
   },
 ];
 
 interface GameInterface {
   name: string;
   route: string;
-  src: string;
+  src?: string;
+  href?: string;
   targets: string;
 }
 
@@ -55,9 +56,13 @@ function Header() {
             <div className="heading">Cognitive Exercises</div>
           </Grid>
           <Grid item>
-            <Button variant="contained" size="large" onClick={() => {
-              navigate('/progress');
-            }}>
+            <Button
+              variant="contained"
+              size="large"
+              onClick={() => {
+                navigate("/progress");
+              }}
+            >
               Progress Report
             </Button>
           </Grid>
@@ -131,16 +136,21 @@ function EachGame({ game }: { game: GameInterface }) {
   const navigate = useNavigate();
   return (
     <>
-    <div className="capsules">
-      <img src={game.src} alt={game.name} />
-      <div className="on-image-text">
-        <h2>{game.name}</h2>
-        <p>{`Let's Start`}</p>
-        <button onClick={()=>{
-          navigate(game.route);
-        }}>Play</button>
+      <div className="capsules">
+        <img src={game.src} alt={game.name} />
+        <div className="on-image-text">
+          <h2>{game.name}</h2>
+          <p>{`Let's Start`}</p>
+          <button
+            onClick={() => {
+              if (game.route) navigate(game.route);
+              else window.location.href = game.href;
+            }}
+          >
+            Play
+          </button>
+        </div>
       </div>
-    </div>
     </>
   );
 }
