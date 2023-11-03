@@ -13,7 +13,7 @@ mongoose
   .connect(DB_LINK)
   .then(() => {
     console.log("Connection to DB established!");
-    app.listen(3000, () => {
+    app.listen(PORT, () => {
       console.log(`Listening at http://localhost:${PORT}`);
     });
   })

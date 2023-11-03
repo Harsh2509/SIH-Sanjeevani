@@ -6,7 +6,7 @@ const router = express.Router();
 const secret = process.env.SECRET || "t3rc3Ssdkfaldfgiurxcmnbuhjvcnbgiegouy";
 
 const loginSchema = z.object({
-  username: z.string().max(100).min(5),
+  email: z.string().email().max(200),
   password: z.string().min(8).max(100),
 });
 
@@ -50,7 +50,7 @@ router.post("/signup", validate(signUpSchema), async (req, res) => {
 router.post("/login", validate(loginSchema), async (req, res) => {
   const user = req.body;
   const dbUser = await User.findOne({
-    username: user.username,
+    email: user.email,
     password: user.password,
   });
   if (!dbUser) {
